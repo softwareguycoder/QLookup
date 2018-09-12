@@ -22,7 +22,7 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	{
 		MessageBox(NULL, "Could not load Windows Sockets DLL.",
 			PROG_NAME, MB_OK | MB_ICONSTOP);
-		
+
 		WSACleanup();	// Free all allocated program resources and exit
 		return 1;
 	}
@@ -34,7 +34,7 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	{
 		MessageBox(NULL, "Could not get IP address.",
 			PROG_NAME, MB_OK | MB_ICONSTOP);
-		
+
 		WSACleanup();	// Free all allocated program resources and exit
 		return 1;
 	}
@@ -63,7 +63,7 @@ int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 	{
 		char *s = NULL;
 
-		// Translates the output of the WSAGetLastError() function into a 
+		// Translates the output of the WSAGetLastError() function into a
 		// human-understandable message.
 		FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER
 			| FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
